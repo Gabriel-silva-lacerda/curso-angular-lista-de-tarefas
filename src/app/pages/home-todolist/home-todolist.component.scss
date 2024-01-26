@@ -1,0 +1,14 @@
+:host {
+  width: 100%;
+
+  .task {
+    overflow: auto;
+    height: 700px;
+
+    span {
+      color: var(--white);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+  }
+}

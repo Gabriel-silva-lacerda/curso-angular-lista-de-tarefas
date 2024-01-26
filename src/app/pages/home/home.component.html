@@ -1,0 +1,37 @@
+<section
+  class="home"
+  [ngStyle]="{
+    justifyContent: todos().length ? 'space-between' : 'center'
+  }"
+>
+  <div class="taskContainer">
+    @if(!todos().length) {
+    <img src="../../../assets/img/task-list-null.png" alt="Imagem todo-list" />
+    } @else {
+    <span class="title">Minha lista</span>
+    } @if (!activeButton && !todos().length) {
+    <button class="creatList" (click)="activeButton = true">
+      Crie uma lista de tarefas
+    </button>
+    } @if(activeButton || todos().length) {
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <input
+        type="text"
+        placeholder="Valor"
+        [(ngModel)]="todoValue"
+        name="task"
+      />
+      <button class="buttonRigth">
+        <img src="../../../assets/icons/add.svg" alt="button" />
+      </button>
+    </form>
+    } @if(error) {
+    <span class="error">{{ error }}</span>
+    } @if(todos().length) {<app-home-todolist />}
+  </div>
+  @if(todos().length) {
+  <button class="buttonDelet" (click)="deleteAll()">
+    Deletar todos os Items
+  </button>
+  }
+</section>

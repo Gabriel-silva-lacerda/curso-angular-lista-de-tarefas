@@ -1,0 +1,91 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: var(--primary);
+  width: 100%;
+
+  .taskContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 0 1.3rem;
+
+    .title {
+      font-size: 1.5rem;
+      color: var(--white);
+      display: block;
+      margin-top: 1.2rem;
+    }
+
+    .creatList {
+      border-radius: 0.4rem;
+      padding: 1rem;
+      border: none;
+
+      font-size: 1rem;
+      background: var(--primary-010);
+      color: var(--white);
+      cursor: pointer;
+
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      background: var(--secondary);
+      border-radius: 0.4rem;
+      padding: 0 0.4rem;
+      box-sizing: border-box;
+      margin: 1rem 0;
+      input[type="text"] {
+        padding: 1rem 0.2rem;
+        border: none;
+
+        font-size: 1rem;
+        background: var(--secondary);
+        color: var(--white);
+
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+        display: block;
+      }
+
+      .buttonRigth {
+        border-radius: 0.5rem;
+        background: var(--primary-010);
+        padding: 0.6rem;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .error {
+    color: red;
+    margin-bottom: 1rem;
+  }
+
+  .buttonDelet {
+    background: red;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem 1.3rem;
+    cursor: pointer;
+    margin-bottom: 1.3rem;
+    color: var(--white);
+  }
+}

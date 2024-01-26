@@ -1,0 +1,19 @@
+<div>
+  <input
+    class="buttonLeft"
+    type="checkbox"
+    (click)="completedTask(todo)"
+    [ngStyle]="{
+      background: todo.isCompleted ? 'green' : 'white'
+    }"
+  />
+  <input
+    type="text"
+    [ngModel]="todo.task"
+    name="task"
+    (change)="editTask($event, todo)"
+  />
+  <button class="buttonRigth" (click)="deleteTask(todo)">
+    <img src="../../../assets/icons/delete.svg" alt="button" />
+  </button>
+</div>

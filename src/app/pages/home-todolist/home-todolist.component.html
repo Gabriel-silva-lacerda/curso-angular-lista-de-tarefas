@@ -1,0 +1,55 @@
+<div class="task">
+  @if(dataFilter(false)) {
+  <span>Pendências</span>
+  } @for (todo of todos(); track todo) { @if(!todo.isCompleted) {
+  <app-input [todo]="todo" />
+  } } @if(dataFilter(true)) {
+  <span>Completos</span>
+  } @for (todo of todos(); track todo) { @if(todo.isCompleted) {
+  <app-input [todo]="todo" />
+  }}
+</div>
+
+<!-- @for (todo of todos(); track todo) { @if(!todo.isCompleted) {
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <input
+    class="buttonLeft"
+    type="checkbox"
+    (click)="completedTask(todo)"
+    [ngStyle]="{
+      background: todo.isCompleted ? 'green' : 'white'
+    }"
+  />
+  <input
+    type="text"
+    [ngModel]="todo.task"
+    name="task"
+    (change)="editTask($event, todo)"
+  />
+  <button class="buttonRigth" (click)="deleteTask(todo)">
+    <img src="../../../assets/icons/delete.svg" alt="button" />
+  </button>
+</form>
+}} -->
+
+<!-- @for (todo of todos(); track todo) { @if(todo.isCompleted) {
+<div>
+  <input
+    class="buttonLeft"
+    type="checkbox"
+    (click)="completedTask(todo)"
+    [ngStyle]="{
+      background: todo.isCompleted ? 'green' : 'white'
+    }"
+  />
+  <input
+    type="text"
+    [ngModel]="todo.task"
+    name="task"
+    (change)="editTask($event, todo)"
+  />
+  <button class="buttonRigth" (click)="deleteTask(todo)">
+    <img src="../../../assets/icons/delete.svg" alt="button" />
+  </button>
+</div>
+}} -->

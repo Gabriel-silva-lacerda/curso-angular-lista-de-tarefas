@@ -1,0 +1,58 @@
+:host {
+  span {
+    color: var(--white);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    position: relative;
+    width: 100%;
+    background: var(--secondary);
+    border-radius: 0.4rem;
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    max-width: 300px;
+
+    input[type="text"] {
+      padding: 1rem 0.2rem;
+      border: none;
+
+      font-size: 1rem;
+      background: var(--secondary);
+      color: var(--white);
+
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+      display: block;
+    }
+
+    .buttonRigth {
+      border-radius: 0.5rem;
+      background: var(--primary-010);
+      padding: 0.6rem;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttonLeft {
+      appearance: none;
+      background: var(--white);
+      width: 32px;
+      height: 25px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
